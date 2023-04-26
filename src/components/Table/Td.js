@@ -11,10 +11,10 @@ const Td = (props) => {
         if (isEditable) {
             return (
                 <>
-                    <td>
+                    <td className='editable edit'>
                         <AiFillEdit />
                     </td>
-                    <td>
+                    <td className='editable delete'>
                         <BsFillTrashFill />
                     </td>
                 </>
@@ -22,7 +22,7 @@ const Td = (props) => {
         }
         if (isViewable) {
             return (
-                <td>
+                <td className='viewable'>
                     <AiFillEye />
                 </td>
             )

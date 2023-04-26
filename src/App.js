@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='app'>
       <MainNavigation />
-      <Table headers={mainTable}/>
+      <Table headers={mainTable} tabaleButtonsType={'edit'}/>
     </div>
   );
 }

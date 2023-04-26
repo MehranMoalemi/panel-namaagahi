@@ -6,7 +6,7 @@ import Th from './Th';
 import tableOptions from './tableOptions';
 
 const Table = (props) => {
-    const { headers, tabaleButtonsType } = props;
+    const { headers, tabaleButtonsType, tableOptionsArray } = props;
     const [rowData, setRowData] = useState([])
 
     const isEditable = tabaleButtonsType === 'edit' ? true : false;
@@ -16,16 +16,16 @@ const Table = (props) => {
     useEffect(() => {
         fetcher('api/v1/main', setRowData)
         console.log(rowData, 'data')
+        console.log(tableOptions['add']())
     }, [])
 
 
     return (
         <div className='table-container'>
             <div className='tableOptions'>
-                {tableOptions.add()}
-                {tableOptions.addList()}
-                {tableOptions.addContract()}
-                {tableOptions.print()}
+                {tableOptionsArray.map((option) => (
+                    tableOptions[option.name](option.callback)
+                ))}
             </div>
             <table className='table'>
                 <thead>

@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './table.scss'
 import { fetcher } from '../../fetch';
 import Td from './Td';
-import { AiFillEdit } from 'react-icons/ai';
-import { BsFillTrashFill } from 'react-icons/bs';
 import Th from './Th';
-import { isEditable } from '@testing-library/user-event/dist/utils';
 
 
 const Table = (props) => {

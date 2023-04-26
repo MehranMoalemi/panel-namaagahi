@@ -1,0 +1,93 @@
+$primary:#71427D;
+$bg:#02010A;
+$pink:#9f5b72;
+$light-purple:#695d7a;
+$navy:#494b69;
+$black: #000000;
+$white: #fcfcfc;
+
+
+$ten: 45%;
+$twenty: 40%;
+$forty: 30%;
+$sixty: 20%;
+$eighty: 10%;
+$hunderd: 0%;
+
+
+
+$colors: (
+  primary: (
+    base: $primary,
+    ten: lighten($primary, $ten),
+    twenty: lighten($primary, $twenty),
+    forty: lighten($primary, $forty),
+    sixty: lighten($primary, $sixty),
+    eighty: lighten($primary, $eighty),
+    hunderd: lighten($primary, $hunderd),
+  ),
+  pink: (
+    base: $pink,
+    ten: lighten($pink, $ten),
+    twenty: lighten($pink, $twenty),
+    forty: lighten($pink, $forty),
+    sixty: lighten($pink, $sixty),
+    eighty: lighten($pink, $eighty),
+    hunderd: lighten($pink, $hunderd),
+  ),
+  light-purple: (
+    base: $light-purple,
+    ten: lighten($light-purple, $ten),
+    twenty: lighten($light-purple, $twenty),
+    forty: lighten($light-purple, $forty),
+    sixty: lighten($light-purple, $sixty),
+    eighty: lighten($light-purple, $eighty),
+    hunderd: lighten($light-purple, $hunderd),
+  ),
+  navy: (
+    base: $navy,
+    ten: lighten($navy, $ten),
+    twenty: lighten($navy, $twenty),
+    forty: lighten($navy, $forty),
+    sixty: lighten($navy, $sixty),
+    eighty: lighten($navy, $eighty),
+    hunderd: lighten($navy, $hunderd),
+  ),
+
+  black: (
+    base: $black,
+    ten: lighten($black, $ten),
+    twenty: lighten($black, $twenty),
+    forty: lighten($black, $forty),
+    sixty: lighten($black, $sixty),
+    eighty: lighten($black, $eighty),
+    hunderd: lighten($black, $hunderd),
+  ),
+  white: (
+    base: $white,
+    ten: darken($white, $ten),
+    twenty: darken($white, $twenty),
+    forty: darken($white, $forty),
+    sixty: darken($white, $sixty),
+    eighty: darken($white, $eighty),
+    hunderd: darken($white, $hunderd),
+  ),
+  bg: (
+    base: $bg,
+    ten: lighten($bg, $ten),
+    twenty: lighten($bg, $twenty),
+    forty: lighten($bg, $forty),
+    sixty: lighten($bg, $sixty),
+    eighty: lighten($bg, $eighty),
+    hunderd: lighten($bg, $hunderd),
+    dtwenty:#1C1919,
+  )
+);
+
+
+//
+// function
+//
+@function color($base-color, $shade: base) {
+    @return map-get(map-get($colors, $base-color), $shade);
+  } ;

@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+
+.nav-container {
+    display: flex;
+    flex-basis: 10rem;
+    flex-direction: column;
+    padding: 2rem;
+    height: 100vh;
+    // background-color: #71427d;
+    background-color: color(black);
+    border-left: 0.1px solid #e1e1ee11;
+    z-index: 999;
+
+    .item {
+        margin-bottom: 4em;
+        padding: 1em;
+        border: .5px solid transparent;
+        border-radius: 1em;
+        cursor: pointer;
+        transition: all .5s;
+
+        &:hover {
+            background-color: #04021a41;
+            border: .5px solid #2020226e;
+        }
+
+        &:active {
+            background-color: #2020226e;
+        }
+
+        img {
+            width: 2.5em;
+            height: 2.5em;
+        }
+    }
+
+    svg {
+        display: block;
+        width: 2em;
+        height: 2em;
+        color: color(white, twenty);
+        margin-right: 0 ;
+    }
+}

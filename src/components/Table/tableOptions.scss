@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.btn {
+    color: color(white, forty);
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.add {
+    &:hover {
+        color: #3ec99b;
+    }
+}
+
+.addlist {
+    &:hover {
+        color: color(pink);
+    }
+}
+
+.addcontract {
+    &:hover {
+        color: #962fa0;
+    }
+}
+.print {
+    &:hover {
+        color: #f0feff;
+    }
+}

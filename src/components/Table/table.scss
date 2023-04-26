@@ -68,7 +68,7 @@
             text-align: center;
         }
 
-        
+
         td.editable,td.viewable{
             border: .5px solid #e1e1e125;
             padding: 1rem;
@@ -103,5 +103,12 @@
                 color: #e74162c5;
             }
         }
+    }
+}
+.tableOptions{
+    display: flex;
+    margin-bottom: 4rem;
+    >*{
+        margin-left: 2rem;
     }
 }

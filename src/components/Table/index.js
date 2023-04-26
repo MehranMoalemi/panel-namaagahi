@@ -5,24 +5,29 @@ import Td from './Td';
 import { AiFillEdit } from 'react-icons/ai';
 import { BsFillTrashFill } from 'react-icons/bs';
 import Th from './Th';
+import { isEditable } from '@testing-library/user-event/dist/utils';
 
 
 const Table = (props) => {
-    const { headers } = props;
+    const { headers,tabaleButtonsType } = props;
     const [rowData, setRowData] = useState([])
 
+    const isEditable = tabaleButtonsType==='edit'?true:false;
+    const isViewable = !isEditable;
   
 
     useEffect(() => {
         fetcher('api/v1/main', setRowData)
         console.log(rowData, 'data')
     }, [])
+
+
     return (
         <div className='table-container'>
             <table className='table'>
                 <thead>
                     <tr>
-                        <Th data={headers} isEditable={true}/>
+                        <Th data={headers} isEditable={isEditable}/>
                     </tr>
                 </thead>
 
@@ -30,7 +35,7 @@ const Table = (props) => {
                     {rowData.map(data => (
                         <>
                             <tr key={data.id}>
-                                <Td data={data} isEditable={true}/>
+                                <Td data={data} isEditable={isEditable} isViewable={isViewable}/>
                             </tr>
                         </>
                     ))}
